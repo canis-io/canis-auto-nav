@@ -11,7 +11,6 @@ function CanisAutoNav($element, config) {
     this.isInitializing = false;
     $(document).on('DOMNodeInserted', function(e) {
         if ($(e.target).is(self.config.itemSelector) || $(e.target).find(self.config.itemSelector).length > 0) {
-            console.log('found item!');
             self.safeUpdateMenu();
         }
     });
@@ -33,7 +32,6 @@ CanisAutoNav.prototype.render = function() {
     }
     $('body').scrollspy({target: '#' + this.$element.attr('id'), 'offset': this.$element.canisNavBarHeight() + 11})
     this.$element.on('activate.bs.scrollspy', function() {
-        console.log('scrollspy fire');
         if ($(this).find('.active').length === 0) {
             $(this).find('li').first().addClass('active');
         } else {
