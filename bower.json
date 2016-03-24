@@ -1,6 +1,6 @@
 {
   "name": "canis-auto-nav",
-  "version": "0.1",
+  "version": "0.1.1",
   "main": "js/canis.autoNav.js",
   "dependencies": {
     "canis-assets-lib": ">=0.1"
